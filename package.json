@@ -1,0 +1,41 @@
+{
+  "name": "Readit",
+  "version": "1.0.0",
+  "description": "Save websites",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --exec 'electron .'",
+    "build": "electron-builder --help",
+    "win-cert": "electron-builder create-self-signed-cert -p rynhardt"
+  },
+  "keywords": [],
+  "author": "Rynhardt Smith",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^6.0.7",
+    "electron-builder": "^21.2.0",
+    "nodemon": "^1.19.2"
+  },
+  "dependencies": {
+    "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "appId": "com.slackacademy.redit",
+    "copyright": "Copyright 2019 Rynhardt",
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis",
+      "certificateFile": "private/rynhardt.p12",
+      "certificatePassword": "",
+      "verifyUpdateCodeSignature": false,
+      "publisherName": "rynhardt"
+    },
+    "linux": {
+      "category": "Utility"
+    }
+  }
+}

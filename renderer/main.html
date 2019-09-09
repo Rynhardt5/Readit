@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Website bookmarker</title>
+  </head>
+  <body>
+    <header>
+      <button id="show-modal">+</button>
+      <input type="text" id="search" placeholder="Search" />
+    </header>
+
+    <main>
+      <p id="no-items">
+        No items
+      </p>
+      <div id="items"></div>
+    </main>
+
+    <div id="modal">
+      <input type="text" placeholder="Enter URL " id="url" />
+      <button id="add-item">Add item</button>
+      <button id="close-modal">Cancel</button>
+    </div>
+    <script>
+      require('./app');
+      require('./menu');
+    </script>
+  </body>
+</html>
